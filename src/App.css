@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --sun-bg-color: #102F25;
+  /* Default sun color */
+  --object1-bg-color: #C21807;
+  /* Default object1 color */
+  --object2-bg-color: #0D47A1;
+  /* Default object2 color */
+  --color-bg: linear-gradient(180deg, #5F8575, #2E4D43);
+  /* Default body background color */
+  --input-color: #FFFFFF;
+  --border-color: #B5AEAB;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  background-size: cover;
+
+}
+
+
+.gradient__bg {
+  background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+
+  background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+
+  background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+
+  background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+
+  background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+
+}
+
+.section__margin {
+  padding: 4rem 6rem;
+
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+
+  }
+
+  .section__margin {
+    padding: 4rem;
+
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+
+  }
+
+  .section__margin {
+    padding: 4rem 2rem;
+
+  }
+}

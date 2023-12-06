@@ -1,0 +1,161 @@
+.a {
+    color: white;
+}
+
+.containerlb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 0px;
+    border: none;
+
+}
+
+
+
+
+.login {
+    font-size: 30px;
+    color: white;
+
+}
+
+.loginbox {
+    width: 150px;
+    height: 80px;
+    text-align: center;
+    align-self: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    margin-left: 10px;
+
+}
+
+.inputborder {
+
+    width: 300px;
+    margin-top: 10px;
+    display: flex;
+    border: none;
+    outline: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+
+}
+
+.userL {
+    color: white;
+}
+
+input.userL[type="text"],
+input.passL[type="password"] {
+    color: var(--input-color);
+    width: 320px;
+    height: 30px;
+    padding: 8px;
+    background: transparent;
+    padding-left: 14px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    text-size-adjust: 10px;
+
+}
+
+
+
+input[type="text"]::placeholder::click .submit {
+    color: rgb(51, 47, 47);
+}
+
+.lp {
+    color: white;
+}
+
+.submit:hover {
+    background-color: #000000;
+    border-color: black;
+    color: white;
+
+}
+
+.forgot {
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -23px;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+
+
+button {
+    height: 50px;
+    width: 326px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+    background-color: white;
+    margin-right: 20px;
+
+}
+
+.lp {
+    position: relative;
+    top: 17px;
+    right: -12px;
+    pointer-events: none;
+}
+
+.move-up {
+    animation: moveUp 0.2s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translate(0, 0);
+
+        /* Initial position */
+    }
+
+    to {
+        transform: translate(-12px, -20px);
+        /* Moving the word up by 5 pixels */
+    }
+}
+
+.move-back {
+    animation: moveBack 0.2s ease-in-out forwards;
+}
+
+@keyframes moveBack {
+    from {
+        transform: translate(-12px, -20px);
+
+        /* Initial position */
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        /* Moving the word up by 5 pixels */
+    }
+}
+
+input:-webkit-autofill {
+
+    background-color: transparent;
+    border-color: transparent;
+
+}
