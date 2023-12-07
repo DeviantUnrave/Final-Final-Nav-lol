@@ -100,7 +100,7 @@ input[type="text"]::placeholder::click .submit {
 
 
 
-button {
+button.submit {
     height: 50px;
     width: 326px;
     padding: 8px 20px;

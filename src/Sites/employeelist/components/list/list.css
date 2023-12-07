@@ -1,45 +1,145 @@
-.container {
+.containerList {
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 100vh;
     border: solid 1px black;
     align-items: center;
     justify-content: center;
 }
 
-.box {
+.box1 {
     display: flex;
-    background-color: #7e5b57;
+    background-color: #102F25;
     align-self: center;
-    width: 1800px;
-    height: 800px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 95px;
+    width: 95%;
+    height: 88%;
     border-radius: 15px;
-    border: 1px solid black;
 
 }
 
-.Search {
-    width: 100%;
+.box2 {
+    display: flex;
+    background-color: #5F8575;
+    align-self: center;
+    width: 99%;
+    height: 98%;
+    border-radius: 15px;
+    flex-direction: column;
+    overflow-y: auto;
+    /* Enable vertical scrollbar */
+
+}
+
+
+input[type="text"].SearchEmp,
+input[type="password"].SearchEmp {
+    color: var(--input-color);
+    width: 250px;
+    height: 30px;
+    padding: 8px;
+    margin-left: 0px;
+    background: #102F25;
+    padding-left: 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    text-size-adjust: 10px;
 }
 
 .AddDiv {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    border: solid 1px black;
     height: 100px;
-    justify-items: center;
+
+}
+
+
+
+
+
+
+.AddDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
 }
 
 .Add {
-    border: none;
-    background: none;
-    font-weight: bold;
     display: flex;
-    font-size: 16px;
-    border: 1px black solid;
-    height: 50px;
+
     align-items: center;
     justify-content: center;
-    width: 30%;
+    color: var(--input-color);
+    width: 130px;
+    height: 33px;
+    padding: 8px;
+    background: #102F25;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    text-size-adjust: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
 
+.Add:hover {
+    text-shadow: 0 0 10px #5F8575;
+}
+
+/* Adding new lines for each employee */
+button.Sd,
+button.Ed,
+button.De {
+    height: 30px;
+    width: 140px;
+    font-size: 16px;
+    border: 1px solid #102F25;
+    color: white;
+    border-radius: 37px;
+    background-color: #102F25;
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+.userInfo {
+    display: flex;
+}
+
+
+.empInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid black;
+    height: auto;
+    /* Adjust the height as needed */
+    padding: 20px;
+    /* Add padding for better visualization */
+}
+
+.userData {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.userData p {
+    margin-right: 10px;
+    /* Adjust the space between elements */
+
+    /* Space between rows */
 }

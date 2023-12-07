@@ -2,17 +2,18 @@ import React from "react";
 import './loginbox.css';
 
 function Loginbox() {
+    //use this as reference connecting the database, check if the values are matching the database
     const handleClick = () => {
         const enteredUsername = document.getElementById('username').value;
         const enteredPassword = document.getElementById('password').value;
 
-        // Perform a basic check for credentials (replace this with actual authentication logic)
+        // Perform a basic check for credentials replace this with backedn meow
         if (enteredUsername === 'admin' && enteredPassword === 'admin') {
             // Credentials match - redirect to Employee List (admin)
-            window.location.href = '/Create';
+            window.location.href = '/EmployeeList'; Create
         } else if (enteredUsername === 'employee' && enteredPassword === 'employee') {
             // Credentials match - redirect to Dashboard (employee)
-            window.location.href = '/EmployeeList'; // Replace with your employee dashboard url
+            window.location.href = '/Create'; // Replace with your employee dashboard url
         } else if (enteredUsername === '' && enteredPassword === '') {
             alert('Please fill out the required fields');
         } else {

@@ -5,12 +5,9 @@ const Navbar = () => {
     return (
 
         <div className="NavContainer">
-            <div className="Employee">
-                <h1> Employee </h1>
-            </div>
-            <div className="right">
-                <button href="*" className="LogOut"> Log Out</button>
-            </div>
+            <h1 className="ElN"> Employee List</h1>
+            <button className="LogOut"> Log Out</button>
+
         </div>
     )
 }

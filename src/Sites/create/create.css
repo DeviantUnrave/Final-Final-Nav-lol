@@ -5,7 +5,6 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    border: 1px solid black;
 }
 
 .Registration {
@@ -51,8 +50,8 @@
 
 
 
-input[type="text"],
-input[type="password"] {
+input[type="text"].ic,
+input[type="password"].ic {
     color: var(--input-color);
     width: 320px;
     height: 30px;
@@ -83,9 +82,6 @@ input[type="password"]::placeholder {
 
 }
 
-
-
-
 .Registration {
     margin-top: 20px;
 }
@@ -98,6 +94,18 @@ input[type="password"]::placeholder {
     width: 100%;
     height: 40vh;
     gap: 50px;
+}
+
+button.Register {
+    height: 50px;
+    width: 326px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+    background-color: white;
+    margin-right: 20px;
+
 }
 
 .move-up {
