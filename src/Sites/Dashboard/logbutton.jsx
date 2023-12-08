@@ -23,7 +23,7 @@ const LogButton = () => {
         setLogTime(currentTime);
       } else if (hours >= 17 && hours <= 24) {
         setLogType('Work has ended.');
-        setLogTime(null); // Fix: setLogTime should be null for invalid Time-Out
+        setLogTime(null);
       }
     } else if (type === 'Time-out') {
       if (logType === 'Work has not started.' || logType === 'Work has ended.') {
@@ -50,9 +50,9 @@ const LogButton = () => {
       <button className="buttons" onClick={() => handleLogClick('Time-out')}>
         Time-out
       </button>
-      {/* Display log type and time information below the buttons */}
+
       <div className="log-info">
-        {logType && <p style={{ color: 'black' }}>{logType} {logTime && `at ${logTime.toLocaleTimeString()}`}</p>}
+        {logType && <p style={{ color: 'white' }}>{logType} {logTime && `at ${logTime.toLocaleTimeString()}`}</p>}
       </div>
     </div>
   );

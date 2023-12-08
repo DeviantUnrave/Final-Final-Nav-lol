@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './loginbox.css';
+import axios from "axios";
 
 function Loginbox() {
     const [username, setUsername] = useState("");
@@ -7,29 +8,17 @@ function Loginbox() {
 
     const handleClick = async () => {
         try {
-            const response = await fetch("logindb.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    employee_id: username,
-                    password: password,
-                }),
+            const response = await axios.post('logindb.php', {
+                employee_id: username,
+                password: password,
             });
 
-            if (response.ok) {
-                const data = await response.json();
-                if (data.user_id) {
-                    // Credentials match - redirect or handle success as needed
-                    window.location.href = '/EmployeeList'; // Replace with your employee dashboard url
-                } else {
-                    // Credentials do not match - show error message or handle as needed
-                    alert('Invalid credentials. Please try again.');
-                }
+            if (response.data.user_id) {
+                // Credentials match - redirect or handle success as needed
+                window.location.href = '/EmployeeList'; // Replace with your employee dashboard URL
             } else {
-                // Handle error response from the server
-                alert('Error during login. Please try again.');
+                // Credentials do not match - show error message or handle as needed
+                alert('Invalid credentials. Please try again.');
             }
         } catch (error) {
             console.error('Error during login:', error);

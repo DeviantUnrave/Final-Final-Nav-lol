@@ -3,8 +3,9 @@
 include 'dbconn.php';
 
 // Function to validate user credentials
-function validateCredentials($employee_id, $password, $conn) {
-    
+function validateCredentials($employee_id, $password, $conn)
+{
+
     // Escape variables to prevent SQL injection
     $employee_id = mysqli_real_escape_string($conn, $employee_id);
     $password = mysqli_real_escape_string($conn, $password);

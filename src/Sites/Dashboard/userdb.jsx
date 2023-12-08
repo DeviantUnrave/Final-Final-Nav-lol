@@ -11,11 +11,13 @@ const UserDB = () => {
   };
 
   return (
+
     <div className="user-db">
       <img src={user.photo} alt="User" className="user-pic" />
-      <h2>{user.name}</h2>
+      <br></br>
+      <h2 className='usernamedb'>{user.name}</h2>
       <p className="user-date">Date: {user.date}</p>
-    </div>
+    </div >
   );
 };
 

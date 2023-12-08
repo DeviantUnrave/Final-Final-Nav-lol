@@ -11,9 +11,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard">
-      <header>
-        <h1>Employee Dashboard</h1>
+    <>
+      <div className="dbheader">
+        <h1 className='meow'>Employee Dashboard</h1>
         <div className="user-image-dropdown">
           <img
             src="/path/to/user-image.jpg"
@@ -29,14 +29,14 @@ const Dashboard = () => {
             </div>
           )}
         </div>
-      </header>
-      <div className="user-db">
+      </div>
+      <div className="dashboard">
         <UserDB />
+        <div className="log-db">
+          <LogButton />
+        </div>
       </div>
-      <div className="log-db">
-        <LogButton />
-      </div>
-    </div>
+    </>
   );
 };
 
