@@ -1,0 +1,54 @@
+.NavContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.Navbox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #102F25;
+    width: 95%;
+    border-radius: 12px;
+    height: 75%;
+
+}
+
+.LogOut {
+    color: #C4D0CD;
+    transition: box-shadow 0.2s ease-in-out;
+    width: 130px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-left: 40px;
+
+
+}
+
+.LogOut:hover {
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+
+.ElN {
+    display: flex;
+    color: #C4D0CD;
+    justify-content: center;
+    flex: 1;
+    padding-left: 140px;
+}
+
+.LogOut {
+    border: 1px solid #2E4D43;
+    background: #2E4D43;
+    font-weight: bold;
+    position: relative;
+    left: -46px;
+}

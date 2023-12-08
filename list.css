@@ -1,0 +1,161 @@
+.containerList {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    display: flex;
+    background-color: #102F25;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 95px;
+    width: 95%;
+    height: 88%;
+    border-radius: 15px;
+
+}
+
+.mag {
+    position: absolute;
+    top: -257px;
+    right: 656px;
+}
+
+.box2 {
+    display: flex;
+    background-color: #5F8575;
+    align-self: center;
+    width: 99%;
+    height: 98%;
+    border-radius: 15px;
+    flex-direction: column;
+    overflow-y: auto;
+
+
+}
+
+
+input[type="text"].SearchEmp,
+input[type="password"].SearchEmp {
+    color: var(--input-color);
+    width: 350px;
+    height: 30px;
+    padding: 8px;
+    margin-left: 50px;
+    background: #2E4D43;
+    padding-left: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    text-size-adjust: 10px;
+
+
+}
+
+.AddDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #102F25;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.listtop {
+    color: #C4D0CD;
+}
+
+.listtop5 {
+    color: #C4D0CD;
+    display: flex;
+    border: 1px black solid;
+    width: 100px;
+    margin-right: -40px;
+    padding-left: 50px;
+    border: none;
+}
+
+
+
+
+
+.AddDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    border: 1px solid #102F25;
+    border-radius: 0px;
+}
+
+.Add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--input-color);
+    width: 130px;
+    height: 33px;
+    padding: 8px;
+    background: #2E4D43;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #2E4D43;
+    text-size-adjust: 10px;
+    text-align: center;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.Add:hover {
+    box-shadow: 0 0 2px 2px #FFFFFF;
+}
+
+button.Sa,
+button.Sd,
+button.Ed,
+button.De {
+    height: 35px;
+    width: 150px;
+    font-size: 20px;
+    border: 1px solid #2E4D43;
+    color: white;
+    border-radius: 12px;
+    background-color: #2E4D43;
+    margin-right: 20px;
+    font-size: 13px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.Sa:hover,
+.Sd:hover,
+.Ed:hover,
+.De:hover {
+    box-shadow: 0 0 2px 2px #FFFFFF;
+}
+
+.userInfo {
+    display: flex;
+}
+
+.empInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    color: white;
+    border-bottom: 1px solid #B5AEAB;
+    border-top: 1px solid #B5AEAB;
+
+}
