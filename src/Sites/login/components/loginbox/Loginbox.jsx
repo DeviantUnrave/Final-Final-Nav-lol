@@ -1,35 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import './loginbox.css';
 
 function Loginbox() {
-    //use this as reference connecting the database, check if the values are matching the database
-    const handleClick = () => {
-        const enteredUsername = document.getElementById('username').value;
-        const enteredPassword = document.getElementById('password').value;
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-        // Perform a basic check for credentials replace this with backedn meow
-        if (enteredUsername === 'admin' && enteredPassword === 'admin') {
-            // Credentials match - redirect to Employee List (admin)
-            window.location.href = '/EmployeeList'; Create
-        } else if (enteredUsername === 'employee' && enteredPassword === 'employee') {
-            // Credentials match - redirect to Dashboard (employee)
-            window.location.href = '/Create'; // Replace with your employee dashboard url
-        } else if (enteredUsername === '' && enteredPassword === '') {
-            alert('Please fill out the required fields');
-        } else {
-            // Credentials do not match - show error message or handle as needed
-            alert('Invalid credentials. Please try again.');
+    const handleClick = async () => {
+        try {
+            const response = await fetch("logindb.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    employee_id: username,
+                    password: password,
+                }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.user_id) {
+                    // Credentials match - redirect or handle success as needed
+                    window.location.href = '/EmployeeList'; // Replace with your employee dashboard url
+                } else {
+                    // Credentials do not match - show error message or handle as needed
+                    alert('Invalid credentials. Please try again.');
+                }
+            } else {
+                // Handle error response from the server
+                alert('Error during login. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('Error during login. Please try again.');
         }
     };
+
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
             handleClick();
         }
     };
-
-
-
 
     function moveLabelUp(e) {
         const label = e.target.previousElementSibling;
@@ -59,15 +72,36 @@ function Loginbox() {
 
             <div className="inputborder">
                 <label className="lp">Username</label>
-                <input className="userL" type="text" id="username" name="username" placeholder=""
-                    onFocus={moveLabelUp} onBlur={moveLabelBack} autoComplete="off" onKeyDown={handleKeyPress} />
+                <input
+                    className="userL"
+                    type="text"
+                    id="username"
+                    name="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    onFocus={moveLabelUp}
+                    onBlur={moveLabelBack}
+                    autoComplete="off"
+                    onKeyDown={handleKeyPress}
+                />
+
                 <br />
                 <br />
                 <br />
                 <br />
                 <label className="lp">Password</label>
-                <input className="passL" type="password" id="password" name="password" placeholder=""
-                    onFocus={moveLabelUp} onBlur={moveLabelBack} autoComplete="off" onKeyDown={handleKeyPress} />
+                <input
+                    className="passL"
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    onFocus={moveLabelUp}
+                    onBlur={moveLabelBack}
+                    autoComplete="off"
+                    onKeyDown={handleKeyPress}
+                />
                 <br />
                 <br />
                 <br />

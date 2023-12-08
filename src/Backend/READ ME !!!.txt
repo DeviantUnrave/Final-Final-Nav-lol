@@ -1,0 +1,10 @@
+Admin log
+admin
+admin
+
+Employee test
+test1
+test1
+
+For log in please pass the user id to the next page so that it can be used 
+for the calling to the database

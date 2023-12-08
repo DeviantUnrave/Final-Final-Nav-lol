@@ -1,0 +1,158 @@
+body {
+  background-color: darkolivegreen;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* dashboard CSS */
+header {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  /* Align items horizontally */
+  align-items: center;
+  width: 100vw;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  flex-grow: 1;
+  /* Take up remaining space to center the text */
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  /* Set background color to white */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* userdb CSS */
+.user-db {
+  text-align: center;
+  margin-top: 200px;
+  /* Adjust the margin-top for user-db */
+}
+
+.user-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-date {
+  font-size: 15px;
+}
+
+
+
+/* logbutton CSS */
+.log-db {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  /* Adjust the margin-top for log-db */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  /* Adjust the max-width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.log-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.log-in-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.log-out-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.log-info {
+  margin-top: 10px;
+}
+
+.buttons {
+  border: 2px solid darkgreen;
+  border-radius: 8px;
+  /* Change border-radius to make the button rectangular */
+  background-color: darkgreen;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.buttons:hover {
+  background-color: green;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5em;
+  }
+
+  .dashboard {
+    padding: 10px;
+  }
+
+  .buttons {
+    padding: 8px 16px;
+    margin-right: 8px;
+  }
+}
