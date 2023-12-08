@@ -116,12 +116,12 @@ button.Register {
     from {
         transform: translate(0, 0);
 
-        /* Initial position */
+
     }
 
     to {
         transform: translate(-12px, -20px);
-        /* Moving the word up by 5 pixels */
+
     }
 }
 
@@ -133,12 +133,12 @@ button.Register {
     from {
         transform: translate(-12px, -20px);
 
-        /* Initial position */
+
     }
 
     to {
         transform: translate(0px, 0px);
-        /* Moving the word up by 5 pixels */
+
     }
 }
 

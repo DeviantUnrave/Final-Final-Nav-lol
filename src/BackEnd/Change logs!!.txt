@@ -1,0 +1,4 @@
+Since our proj is focused on attending not on Salary I decided to remove nalang the weekly salary in
+exchange the whole month of daily salary will be displayed.
+
+And will do the hashing feature lang if all features are working na for the sake of sayon ra maka log in.
