@@ -8,8 +8,8 @@ function Loginbox() {
 
     const handleClick = async () => {
         try {
-            const response = await axios.post('logindb.php', {
-                employee_id: username,
+            const response = await axios.post('http://localhost/Backend/logindb.php', {
+                username: username,
                 password: password,
             });
 
